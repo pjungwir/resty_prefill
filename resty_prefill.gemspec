@@ -1,5 +1,5 @@
 $:.push File.dirname(__FILE__) + '/lib'
-require 'resty_prefill/version'
+require 'resty_prefill'
 
 Gem::Specification.new do |s|
   s.name = "resty_prefill"
