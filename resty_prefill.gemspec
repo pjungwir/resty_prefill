@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.version = RestyPrefill::VERSION
   s.date = "2013-03-10"
 
-  s.summary = "Used to preserve RESTful URLs despite form submit errors."
-  s.description = "Used to preserve RESTful URLs despite form submit errors."
+  s.summary = "Used to preserve RESTful URLs in Rails despite form submit errors."
+  s.description = "Used to preserve RESTful URLs in Rails despite form submit errors."
 
   s.authors = ["Paul A. Jungwirth"]
   s.homepage = "http://github.com/pjungwir/resty_prefill"
