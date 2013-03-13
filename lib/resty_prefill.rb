@@ -1,6 +1,6 @@
 module RestyPrefill
 
-  VERSION = '1.0.0'
+  VERSION = '1.0.1'
 
   def redirect_and_prefill_for(obj)
     (session[:redirect_and_prefill] ||= {})[obj.class.to_s] ||= {
@@ -18,7 +18,7 @@ module RestyPrefill
   def prefill(obj)
     attrs = redirect_and_prefill_for(obj)[:attrs]
     attrs.each do |k,v|
-      obj[:k] = v
+      obj[k] = v
     end
 
     errs = redirect_and_prefill_for(obj)[:errors]
