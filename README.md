@@ -39,7 +39,7 @@ A typical Rails controller has these methods:
 
     end
 
-The problem is how this approach handles errors. To create a Widget, the user starts at `/widgets/new`, but after getting errors he winds up at just `/widgets`. That URL is non-GETtable, non-bookmarkable, and non-sharable. If you do Ctrl-L then Enter, you'll get a routing error. If you click "Like" or "Share", people following your URL get a routing error. Ideally form errors should send the user back to `/widgets/new`. Similarly with `/widgets/2/edit` vs. `/widgets/2`.
+The problem is how this approach handles errors. To create a Widget, the user starts at `/widgets/new`, but after getting errors he winds up at just `/widgets`. That URL is non-GETtable, non-bookmarkable, and non-sharable. If you do Ctrl-L then Enter, you'll get a routing error. If you click "Like" or "Share", people following your URL get a routing error. It messes up Google Analytics, too. Ideally form errors should send the user back to `/widgets/new`. Similarly with `/widgets/2/edit` vs. `/widgets/2`.
 
 So resty\_prefill makes it easy to preserve RESTful URLs even with form errors. Just `include RestyPrefill` in your ApplicationController, then write your code like this:
 
